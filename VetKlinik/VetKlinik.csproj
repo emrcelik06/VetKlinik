@@ -4,6 +4,26 @@
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Bağlantı dizesi gibi gizli ayarlar bu kimlikle bilgisayardaki User Secrets'ta tutulur (repo'ya girmez) -->
+    <UserSecretsId>bb1e1259-b730-4947-ac79-4c27e61a4ea1</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <!-- PostgreSQL için EF Core sağlayıcısı -->
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.*" />
+    <!-- Identity'nin EF Core ile tablolarını oluşturması -->
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="10.0.*" />
+    <!-- Hazır Login / Register / Logout sayfaları -->
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="10.0.*" />
+    <!-- Migration komutları (Add-Migration, Update-Database) için -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.*">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.*">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
 
 </Project>
